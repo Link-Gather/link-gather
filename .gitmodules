@@ -1,0 +1,6 @@
+[submodule "Link-Gather-Front"]
+	path = Link-Gather-Front
+	url = https://github.com/Link-Gather/Link-Gather-Front.git
+[submodule "Link-Gather-API"]
+	path = Link-Gather-API
+	url = https://github.com/Link-Gather/Link-Gather-API.git
