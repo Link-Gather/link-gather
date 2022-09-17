@@ -6,3 +6,9 @@
 	path = Link-Gather-API
 	url = https://github.com/Link-Gather/Link-Gather-API.git
 	branch = main
+[submodule "link-gather-api"]
+	path = link-gather-api
+	url = https://github.com/Link-Gather/link-gather-api.git
+[submodule "link-gather-front"]
+	path = link-gather-front
+	url = https://github.com/Link-Gather/link-gather-front.git
