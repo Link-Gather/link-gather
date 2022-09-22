@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_DATABASE: LinkGather
+      MYSQL_ROOT_PASSWORD: 1234
+    ports:
+      - "3306:3306"
+  la:
+    build:
+      context: ./link-gather-api
+      dockerfile: ../Dockerfile.la
+    environment:
+      - NODE_ENV=development
+      - DB_NAME=LinkGather
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=1234
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - ./link-gather-api/src/:/link-gather-api/src/
+    depends_on:
+      - db
+  lf:
+    build:
+      context: ./link-gather-front
+      dockerfile: ../Dockerfile.lf
+    environment:
+      - NODE_ENV=development
+    ports:
+      - "3030:3030"
+    depends_on:
+      - db
+      - la
+    restart: always
+    volumes:
+      - ./link-gather-front/src/:/link-gather-front/src/

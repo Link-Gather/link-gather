@@ -1,0 +1,15 @@
+FROM node:16-alpine
+
+WORKDIR /link-gather-api
+
+COPY package*.json ./
+
+RUN npm ci
+
+ARG NODE_ENV
+ARG PORT
+ARG COMMIT_HASH
+
+COPY . .
+
+CMD ["npm", "run", "start:dev"]

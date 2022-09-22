@@ -1,11 +1,3 @@
-[submodule "Link-Gather-Front"]
-	path = Link-Gather-Front
-	url = https://github.com/Link-Gather/Link-Gather-Front.git
-	branch = main
-[submodule "Link-Gather-API"]
-	path = Link-Gather-API
-	url = https://github.com/Link-Gather/Link-Gather-API.git
-	branch = main
 [submodule "link-gather-api"]
 	path = link-gather-api
 	url = https://github.com/Link-Gather/link-gather-api.git
