@@ -1,8 +1,9 @@
 version: "3.8"
 services:
   db:
-    image: hch950627/testdb:2022.10.22
+    image: mysql
     environment:
+      MYSQL_DATABASE: LinkGather
       MYSQL_ROOT_PASSWORD: 1234
     ports:
       - "3306:3306"
