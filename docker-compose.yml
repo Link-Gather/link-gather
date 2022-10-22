@@ -1,9 +1,8 @@
 version: "3.8"
 services:
   db:
-    image: mysql
+    image: hch950627/testdb:2022.10.22
     environment:
-      MYSQL_DATABASE: LinkGather
       MYSQL_ROOT_PASSWORD: 1234
     ports:
       - "3306:3306"
@@ -34,7 +33,6 @@ services:
     ports:
       - "3030:3030"
     depends_on:
-      - db
       - la
     restart: always
     volumes:
