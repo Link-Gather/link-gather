@@ -18,10 +18,29 @@ services:
       - DB_USER=root
       - DB_PASSWORD=1234
     ports:
-      - "3000:3000"
+      - "3001:3001"
     restart: always
     volumes:
       - ./link-gather-api/src/:/link-gather-api/src/
+    depends_on:
+      - db
+  ln:
+    build:
+      context: ./link-gather-nest
+      dockerfile: ../Dockerfile.la
+    environment:
+      - NODE_ENV=development
+      - DB_NAME=link_gather
+      - PORT=3000
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASSWORD=1234
+    ports:
+      - "3000:3000"
+    restart: always
+    volumes:
+      - ./link-gather-nest/src/:/link-gather-nest/src/
     depends_on:
       - db
   lf:
@@ -33,7 +52,7 @@ services:
     ports:
       - "3030:3030"
     depends_on:
-      - la
+      - ln
     restart: always
     volumes:
       - ./link-gather-front/src/:/link-gather-front/src/
