@@ -4,3 +4,6 @@
 [submodule "link-gather-front"]
 	path = link-gather-front
 	url = https://github.com/Link-Gather/link-gather-front.git
+[submodule "link-gather-nest"]
+	path = link-gather-nest
+	url = https://github.com/Link-Gather/link-gather-nest.git
