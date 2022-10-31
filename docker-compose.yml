@@ -27,7 +27,7 @@ services:
   ln:
     build:
       context: ./link-gather-nest
-      dockerfile: ../Dockerfile.la
+      dockerfile: ../Dockerfile.ln
     environment:
       - NODE_ENV=development
       - DB_NAME=link_gather
