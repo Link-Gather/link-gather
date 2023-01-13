@@ -6,6 +6,8 @@ COPY package*.json ./
 
 RUN npm ci
 
+ARG API_ENDPOINT
+
 COPY . .
 
 CMD ["npm", "start"]

@@ -49,6 +49,7 @@ services:
       dockerfile: ../Dockerfile.lf
     environment:
       - NODE_ENV=development
+      - API_ENDPOINT=http://localhost:3000
     ports:
       - "3030:3030"
     depends_on:
