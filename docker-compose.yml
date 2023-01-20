@@ -17,6 +17,7 @@ services:
       - DB_PORT=3306
       - DB_USER=root
       - DB_PASSWORD=1234
+      - JWT_SECRET=TEST-TOKEN
     ports:
       - "3001:3001"
     restart: always
