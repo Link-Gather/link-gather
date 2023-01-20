@@ -8,7 +8,6 @@ RUN npm ci
 
 ARG NODE_ENV
 ARG PORT
-ARG JWT_SECRET
 
 COPY . .
 
