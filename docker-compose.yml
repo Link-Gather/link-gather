@@ -36,6 +36,10 @@ services:
       - DB_PORT=3306
       - DB_USER=root
       - DB_PASSWORD=1234
+      - GITHUB_CLIENT_ID=GITHUB_CLIENT_ID
+      - GITHUB_CLIENT_SECRET=GITHUB_CLIENT_SECRET
+      - GOOGLE_CLIENT_SECRET=GOOGLE_CLIENT_SECRET
+      - GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
     ports:
       - "3000:3000"
     restart: always
@@ -49,6 +53,10 @@ services:
       dockerfile: ../Dockerfile.lf
     environment:
       - NODE_ENV=development
+      - API_ENDPOINT=htpp://ln:3000/
+      - GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
+      - GITHUB_CLIENT_ID=GITHUB_CLIENT_ID
+      - GITHUB_CLIENT_SECRET=GITHUB_CLIENT_SECRET
     ports:
       - "3030:3030"
     depends_on:
