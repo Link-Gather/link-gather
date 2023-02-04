@@ -58,7 +58,6 @@ services:
       - API_ENDPOINT=http://ln:3000/
       - GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
       - GITHUB_CLIENT_ID=GITHUB_CLIENT_ID
-      - GITHUB_CLIENT_SECRET=GITHUB_CLIENT_SECRET
     ports:
       - "3030:3030"
     depends_on:
