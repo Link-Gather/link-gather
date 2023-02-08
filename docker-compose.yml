@@ -62,6 +62,7 @@ services:
       - GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
       - GITHUB_CLIENT_ID=GITHUB_CLIENT_ID
       - KAKAO_CLIENT_ID=KAKAO_CLIENT_ID
+      - REDIRECT_URI=http://localhost:3030/oauth
     ports:
       - "3030:3030"
     depends_on:
