@@ -30,7 +30,7 @@ services:
       dockerfile: ../Dockerfile.ln
     environment:
       - NODE_ENV=development
-      - ORIGIN=http://localhost:3030
+      - CORS_ORIGIN=http://localhost:3030
       - DB_NAME=link_gather
       - PORT=3000
       - DB_HOST=db
