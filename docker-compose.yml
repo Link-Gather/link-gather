@@ -46,6 +46,7 @@ services:
       - KAKAO_CLIENT_SECRET=KAKAO_CLIENT_SECRET
       - KAKAO_CLIENT_ID=KAKAO_CLIENT_ID
       - KAKAO_REDIRECT_URI=KAKAO_REDIRECT_URI
+      - COOKIE_SING=COOKIE_SIGN
     ports:
       - "3000:3000"
     restart: always
