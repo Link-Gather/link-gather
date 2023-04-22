@@ -44,7 +44,7 @@ services:
       dockerfile: ../Dockerfile.lf
     environment:
       - NODE_ENV=development
-      - API_ENDPOINT=http://ln:3000
+      - API_ENDPOINT=http://localhost:3000
       - GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
       - GITHUB_CLIENT_ID=GITHUB_CLIENT_ID
       - KAKAO_CLIENT_ID=KAKAO_CLIENT_ID
