@@ -6,24 +6,6 @@ services:
       MYSQL_ROOT_PASSWORD: 1234
     ports:
       - "3306:3306"
-  la:
-    build:
-      context: ./link-gather-api
-      dockerfile: ../Dockerfile.la
-    environment:
-      - NODE_ENV=development
-      - DB_NAME=link_gather
-      - DB_HOST=db
-      - DB_PORT=3306
-      - DB_USER=root
-      - DB_PASSWORD=1234
-    ports:
-      - "3001:3001"
-    restart: always
-    volumes:
-      - ./link-gather-api/src/:/link-gather-api/src/
-    depends_on:
-      - db
   ln:
     build:
       context: ./link-gather-nest
@@ -62,7 +44,7 @@ services:
       dockerfile: ../Dockerfile.lf
     environment:
       - NODE_ENV=development
-      - API_ENDPOINT=http://ln:3000/
+      - API_ENDPOINT=http://ln:3000
       - GOOGLE_CLIENT_ID=GOOGLE_CLIENT_ID
       - GITHUB_CLIENT_ID=GITHUB_CLIENT_ID
       - KAKAO_CLIENT_ID=KAKAO_CLIENT_ID
